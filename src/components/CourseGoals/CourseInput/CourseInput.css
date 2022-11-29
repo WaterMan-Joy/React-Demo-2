@@ -25,9 +25,16 @@
 
 .form-control.invalid input {
   border-color: red;
-  background-color: red;
+}
+
+.form-control.valid input {
+  border-color: green;
 }
 
 .form-control.invalid {
   color: red;
+}
+
+.form-control.valid {
+  color: green;
 }
