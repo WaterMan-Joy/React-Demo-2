@@ -14,9 +14,9 @@ import styles from "./Button.module.css";
 //   box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
 //   cursor: pointer;
 
-//   @media (min-width: 600px) {
-//     width: auto;
-//   }
+// @media (min-width: 600px) {
+//   width: auto;
+// }
 
 //   &:focus {
 //     outline: none;

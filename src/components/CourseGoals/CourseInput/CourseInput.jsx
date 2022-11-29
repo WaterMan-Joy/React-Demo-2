@@ -69,7 +69,11 @@ const CourseInput = (props) => {
   return (
     <form onSubmit={formSubmitHandler}>
       {/* <div className={`form-control ${isValid ? "valid" : "invalid"}`}> */}
-      <div className={styles["form-control"]} invalid={!isValid}>
+      <div
+        className={`${styles["form-control"]} ${
+          isValid ? styles.valid : styles.invalid
+        }`}
+      >
         <label>Course Goal</label>
         <input
           placeholder={isValid ? "입력하세요" : "다시 입력하세요"}
