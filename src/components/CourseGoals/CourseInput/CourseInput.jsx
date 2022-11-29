@@ -7,6 +7,7 @@ const FormControl = styled.div`
   margin: 0.5rem 0;
 
   & label {
+    color: ${(props) => (props.invalid ? "red" : "green")};
     font-weight: bold;
     display: block;
     margin-bottom: 0.5rem;
@@ -15,7 +16,7 @@ const FormControl = styled.div`
   & input {
     display: block;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid ${(props) => (props.invalid ? "red" : "green")};
     font: inherit;
     line-height: 1.5rem;
     padding: 0 0.25rem;
@@ -68,7 +69,7 @@ const CourseInput = (props) => {
   return (
     <form onSubmit={formSubmitHandler}>
       {/* <div className={`form-control ${isValid ? "valid" : "invalid"}`}> */}
-      <FormControl className={`form-control ${isValid ? "valid" : "invalid"}`}>
+      <FormControl invalid={!isValid}>
         <label>Course Goal</label>
         <input
           placeholder={isValid ? "입력하세요" : "다시 입력하세요"}
